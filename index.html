@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GTA VI Countdown</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" type="image/png" href="https://upload.wikimedia.org/wikipedia/commons/f/fc/Rockstar_Games_logo_2020.svg">
+    <meta name="theme-color" content="#000000">
+</head>
+<body>
+    <div class="container">
+        <div class="logo">VI</div>
+        <h1>ДО РЕЛИЗА</h1>
+        
+        <div id="countdown" class="timer-grid">
+            </div>
+
+        <div class="target-date">19 ноября 2026</div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Регистрация Service Worker для установки приложения
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('sw.js')
+                .then(() => console.log('Service Worker Registered'));
+        }
+    </script>
+</body>
+</html>
