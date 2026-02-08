@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;800&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #0a0a0a, #2a002a, #0a0a0a);
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.container {
+    text-align: center;
+    width: 90%;
+    max-width: 600px;
+}
+
+.logo {
+    font-size: 8rem;
+    font-weight: 900;
+    background: linear-gradient(to bottom, #ff00cc, #9900ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 0 15px rgba(255, 0, 204, 0.5));
+    margin-bottom: -20px;
+    font-family: serif;
+}
+
+h1 {
+    font-size: 1.5rem;
+    letter-spacing: 5px;
+    margin-bottom: 30px;
+    opacity: 0.8;
+}
+
+.timer-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.timer-item:last-child {
+    grid-column: span 2;
+}
+
+.timer-item {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 15px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.value {
+    font-size: 2rem;
+    font-weight: 800;
+    display: block;
+    color: #a6f7ff;
+    text-shadow: 0 0 10px rgba(166, 247, 255, 0.6);
+}
+
+.label {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    opacity: 0.7;
+}
+
+.target-date {
+    font-size: 1.2rem;
+    color: #ff99ff;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+@media (min-width: 600px) {
+    .timer-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .timer-item:last-child {
+        grid-column: span 1;
+    }
+}
